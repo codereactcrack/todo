@@ -1,29 +1,22 @@
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import './App.css'
-import Login from './component/auth/Login'
-import Home from './home/Home'
-import { useContext } from 'react'
-import UserContext from './context/UserContext'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import './App.css';
+import Login from './component/auth/Login';
+import Home from './home/Home';
+import ProtectedRoute from './component/auth/ProtectedRoute';
 
 function App() {
-
-  const {currentUser} = useContext(UserContext);
-
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route >
-        <Route path='/' element={<Login />} />
-        {currentUser.displayName &&
-          <Route path='/home' element={<Home />} /> }
+      <Route>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<ProtectedRoute element={<Home />} />} />
       </Route>
     )
-  )
+  );
 
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;

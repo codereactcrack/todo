@@ -3,8 +3,8 @@ import UserContext from "./UserContext"
 
 const UserContextProvider = ({children})=>{
 
-    const localUser = JSON.parse(localStorage.getItem('user'));
-    const [currentUser,setCurrentUser] = useState(localUser || {});
+    const user = JSON.parse(localStorage.getItem('user'));
+    const [currentUser,setCurrentUser] = useState(user || null);
 
     useEffect(() => {
         localStorage.setItem('user',JSON.stringify(currentUser));
