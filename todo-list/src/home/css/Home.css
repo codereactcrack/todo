@@ -1,0 +1,103 @@
+.home-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4285F4;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1.2rem;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .logout {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #e04351;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .sidebar {
+    width: 100px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 1rem 0;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #4285F4;
+    color: white;
+  }
+  
+  .active-link {
+    font-weight: bold;
+    color: #4285F4;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  

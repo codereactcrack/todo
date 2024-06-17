@@ -4,12 +4,12 @@ import UserContext from '../../context/UserContext';
 
 const ProtectedRoute = ({ element }) => {
   const { currentUser } = useContext(UserContext);
-
-  if (!currentUser || !currentUser.displayName) {
+  if (!currentUser || !currentUser.emailVerified) {
     return <Navigate to="/" />;
   }
-
   return element;
 };
 
 export default ProtectedRoute;
+
+
