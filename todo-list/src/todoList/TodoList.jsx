@@ -14,7 +14,7 @@ const TodoList = () => {
         return {
           id:doc.id,
           userName:doc.data().userName,
-          todoList:doc.data().todoList
+          todoList:doc.data().todoList || []
         }
       })
       setList(data);
@@ -26,7 +26,12 @@ const TodoList = () => {
   
   
   const addTaskHandler = async()=>{
-
+    const userId = list[0].id;
+    const userDoc = doc(db,'users',userId)
+    const newList = [...list[0].todoList,task]
+    await updateDoc(userDoc,{
+      todoList : newList
+    })
   }
 
   return (
