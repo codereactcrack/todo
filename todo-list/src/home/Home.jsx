@@ -30,8 +30,8 @@ const Home = () => {
       <div className='main-content'>
         <div className='sidebar'>
           <ul>
-            <li><NavLink to='/home/list' activeClassName='active-link'>TODO</NavLink></li>
-            <li><NavLink to='/home/profile' activeClassName='active-link'>Profile</NavLink></li>
+            <li><NavLink to='/home/list' >TODO</NavLink></li>
+            <li><NavLink to='/home/profile' >Profile</NavLink></li>
           </ul>
         </div>
         <div className='content'>
